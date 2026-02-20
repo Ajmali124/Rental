@@ -269,33 +269,35 @@ const Fleet = () => {
   );
 };
 
+const CDN = "https://exarpro.com" as const;
+
 const Services = () => {
   const shouldReduceMotion = useReducedMotion();
   const services = [
   {
     title: 'Weddings',
     desc: 'Grand entrances deserve grand cars. Decorated luxury sedans & SUVs with professional chauffeurs.',
-    image: '/services/wedding.png',
+    image: CDN ? `${CDN}/wedding.png` : '/services/wedding.png',
   },
   {
     title: 'Airport Transfers',
     desc: 'On-time, every time. Your driver will be waiting — no stress, no waiting.',
-    image: '/services/airport.png',
+    image: CDN ? `${CDN}/airport.png` : '/services/airport.png',
   },
   {
     title: 'Northern Expeditions',
     desc: 'Hunza, Skardu & beyond — in rugged 4x4 luxury with experienced mountain drivers.',
-    image: '/services/northern.png',
+    image: CDN ? `${CDN}/northern.png` : '/services/northern.png',
   },
   {
     title: 'Corporate Rentals',
     desc: 'Daily, weekly & monthly plans for businesses. Dedicated fleet with priority support for your team.',
-    image: '/services/corporate.png',
+    image: CDN ? `${CDN}/corporate.png` : '/services/corporate.png',
   },
   {
     title: 'City Rides',
     desc: 'Daily rentals for errands, meetings, or exploring Lahore. Economy to premium — take your pick.',
-    image: '/services/city.png',
+    image: CDN ? `${CDN}/city.png` : '/services/city.png',
   },
 ];
 
